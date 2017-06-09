@@ -1,0 +1,42 @@
+<div class="mobiletak-header mdl-layout__header mdl-layout__header--waterfall" >
+	<div class="mdl-layout__drawer-button" (click)="openNav()"><i class="material-icons">menu</i></div>
+    <div class="mdl-layout__header-row">
+      <span class="mobiletak-title mdl-layout-title">
+        <a href="/" title="mobiletak"><img class="mobiletak-logo-image" src="images/mobiletak-logo.png"></a>
+      </span>
+      <div class="mobiletak-header-spacer mdl-layout-spacer"></div>
+      <div class="userlogin"><a href="signin-page.html"><i class="fa fa-user-o" aria-hidden="true"></i></a></div>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" [ngClass]="searchFocusClass">
+					<label class="mdl-button mdl-js-button mdl-button--icon" for="site-search" (click)="searchFocus()">
+							<i class="material-icons">search</i>
+						</label>
+						<div class="mdl-textfield__expandable-holder">
+							<input class="mdl-textfield__input" type="search" name="searchkey" id="site-search" (focusout)="focusOutFunction()" [(ngModel)]="searchkey"/>
+							<label class="mdl-textfield__label" for="site-search">Search</label>
+						</div>
+			</div>
+      <button class="mobiletak-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" (click)="toggle()" id="more-button">
+        <i class="material-icons">more_vert</i>
+      </button>
+      <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect dropDown"  for="more-button" *ngIf="drop" (click)="upDropDown()" >
+        <li class="mdl-menu__item">Action One</li>
+        <li class="mdl-menu__item">Action Two</li>
+      </ul>
+    </div>
+</div>
+<!-- Hamburger menu -->
+    <div class="mobiletak-drawer mdl-layout__drawer" [@verticalOpen]="closeOrOpen">
+        <div class="mobiletak-hamburger">
+        <ul>
+          <li class="mdl-js-ripple-effect"><a class="mdl-navigation__link" [routerLinkActive]="['subactive']" routerLink="/home">Home</a></li>
+          <li class="mdl-js-ripple-effect"> <a class="mdl-navigation__link" [routerLinkActive]="['subactive']" routerLink="/about">About</a></li>
+          <li class="mdl-js-ripple-effect"> <a class="mdl-navigation__link" [routerLinkActive]="['subactive']" routerLink="/sport">Sports</a></li>
+          <li class="mdl-js-ripple-effect"><a href="categorypage.html">Viral</a></li>
+          <li class="mdl-js-ripple-effect"><a href="categorypage.html">Gadget</a></li>
+          <li class="mdl-js-ripple-effect"><a href="categorypage.html">Movie</a></li>
+          <li class="mdl-js-ripple-effect"><a href="categorypage.html">Jurm</a></li>
+        </ul>
+        </div>
+    </div>
+    
+<div class="mdl-layout__obfuscator" [ngClass]="overlayClass" (click)="overlayEvent()"></div>

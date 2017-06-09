@@ -1,0 +1,62 @@
+ <!-- VideoPlayer Card -->
+         <div class="mobiletak-videoplayer">
+            <div id="playersetup"><img src="images/jwplayer.jpg" width="100%"></div>
+            <div class="mobiletak-videodetail">
+              <div class="publisher-pic"><img src="images/default.jpg"></div>
+              <div class="mobiletak-rightflt mobiletak-sectiondetail">
+                <div class="mobiletak-videotitle"><h2>56 घंटे बाद आरोपों पर बोले केजरीवाल- सब झूठ है </h2></div>
+                <div class="datetime-detail">Sports | 268 Views | 7 hours Ago </div>
+                <div class="social-sharelist">
+                  <a href="" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                  <a href="" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect"><i class="fa fa-share" aria-hidden="true"></i></a>
+                  <a href="" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect"><i class="fa fa-comments" aria-hidden="true"></i></a>
+                  <a href="" class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect"><i class="material-icons">more_vert</i></a>
+
+                </div>
+              </div>
+                
+            </div>
+         </div>
+        <!-- // VideoPlayer Card -->
+        <!-- Home page timestamp list -->
+        <div class="mobiletak-timestempH">
+           <div class="timestamp-container">
+            <!-- Time list title -->
+             <div class="timestamp-title">
+               <h3>Today</h3>
+               <span>24/04/2017</span>               
+             </div>
+             <!-- // Time list title -->
+            
+          <ul>
+             <li class="timestamp-row nowplaying" *ngFor="let homeData of homeJsonData">
+                 <div class="timestamp-timeplay">
+                    <div class="timeplaypostion">
+                       <span class="pubtime">{{homeData.publisTime}}</span>
+                       <span class="playingnow">
+                         <div class="dotpulse"></div>
+                       NOW PLAYING</span>
+                    </div>
+                 </div>
+                 <div class="timestamp-rowdetails">
+                    <div class="rowdetails-pic">
+                       <a href="#" title="">
+                       <img src="{{homeData.image}}" alt="">
+                       <span class="videoicon"></span>
+                       <span class="videoduration">{{homeData.videoduration}}</span>
+                       </a>
+                    </div>
+                    <div class="rowdetails-txt">
+                       <h3>{{homeData.blogTitle}}</h3>
+                       <div class="timestamp-detail">
+                          <div class="userpic"><img src="{{homeData.defaultImg}}"></div>
+                          <div class="datetime-detail">Sports | 268 Views | 7 hours Ago </div>
+                       </div>
+                    </div>
+                 </div>
+              </li>
+            
+        </ul>
+    </div>
+       

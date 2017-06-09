@@ -1,0 +1,26 @@
+<employeeDetail></employeeDetail>
+<employeeList></employeeList>
+<div class="main_conatiner">
+    <div class="searchDataSec">
+        <form>
+            <input type="text" name="name" placeholder="Search..." [(ngModel)]="filterSearch" />
+        </form>
+    </div>
+    
+    <div class="tableData">
+        <table border="0">          
+            <tr>
+                <th>Player Name</th>
+                <th>Total Run</th>
+                <th>Strike Rate</th>
+            </tr>
+            <tr *ngFor="let crickterName of sportJsonData | filter:filterSearch">
+               <td>{{ crickterName.Name}}</td>
+               <td>{{ crickterName.RollNo }}</td>
+               <td>{{ crickterName.Percentage }}</td>
+            </tr>
+           
+        </table>
+    </div>
+   
+</div>
